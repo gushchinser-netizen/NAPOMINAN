@@ -2,11 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    
+	<!-- label задаёт имя под ярлыком на экране смартфона -->
+	<!-- usesCleartextTraffic разрешает незащищённый HTTP-трафик -->
+	<!-- networkSecurityConfig незащищённый доступ только для заданного хостинга  -->
+	
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="My WebView" 
+        android:label="НАПОМ" 
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
