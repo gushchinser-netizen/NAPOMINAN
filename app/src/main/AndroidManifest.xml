@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://android.com"
-    package="com.example.sergej">
+<manifest xmlns:android="http://android.com">
 
-    <!-- 1. РАЗРЕШЕНИЕ НА ИНТЕРНЕТ -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,7 +13,8 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         
-        <activity android:name=".MainActivity"
+        <activity 
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
