@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <base-config cleartextTrafficPermitted="true">
-        <trust-anchors>
-            <certificates src="system" />
-        </trust-anchors>
-    </base-config>
+    <!-- Разрешаем HTTP-трафик для конкретного домена вашего сайта -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">v964988b.beget.tech</domain>
+    </domain-config>
 </network-security-config>
