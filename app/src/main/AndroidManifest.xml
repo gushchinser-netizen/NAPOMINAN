@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://android.com"
     package="com.example.sergej">
 
-    <!-- 1. РАЗРЕШЕНИЕ НА ИНТЕРНЕТ
+    <!-- 1. РАЗРЕШЕНИЕ НА ИНТЕРНЕТ -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,10 +11,10 @@
         android:label="My WebView" 
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        <!-- 2. РАЗРЕШЕНИЕ НА HTTP-ТРАФИК  -->
         android:usesCleartextTraffic="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -22,5 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
     </application>
 </manifest>
