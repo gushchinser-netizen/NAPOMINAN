@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         
         browser.settings.apply {
             javaScriptEnabled = true
-            cacheMode = WebSettings.LOAD_NO_CACHE
             domStorageEnabled = false
+            cacheMode = WebSettings.LOAD_NO_CACHE
         }
 
         browser.clearCache(true)
