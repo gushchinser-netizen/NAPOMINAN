@@ -3,6 +3,7 @@
 
     <uses-permission android:name="android.android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     
 	<!-- label задаёт имя под ярлыком на экране смартфона -->
 	<!-- usesCleartextTraffic разрешает незащищённый HTTP-трафик -->
