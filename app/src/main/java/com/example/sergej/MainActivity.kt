@@ -5,12 +5,25 @@ import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
+
+        // Запуск функции внутри области видимости жизненного цикла Activity
+        lifecycleScope.launch {
+            myCustomMainFunction()
+        }
+    }
+
+    // Ключевое слово suspend позволяет функции "замирать" без зависания экрана
+    suspend fun myCustomMainFunction() {
+         setContentView(R.layout.activity_main)
 
         val browser: WebView = findViewById(R.id.webBrowser)
         
@@ -25,7 +38,8 @@ class MainActivity : AppCompatActivity() {
 
         browser.clearCache(true)
         browser.clearHistory()
-
-        browser.loadUrl("http://v964988b.beget.tech/")
+        // задержка, чтоб успело соединиться с интернетом
+        delay(2000L) // Задержка 2 секунды (экран при этом НЕ виснет)
+        browser.loadUrl("http://v964988b.beget.tech/") 
     }
 }
