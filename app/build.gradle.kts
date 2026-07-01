@@ -42,6 +42,10 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
+    // Базовая библиотека для поддержки корутин Kotlin
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
+    // Расширение для Activity, которое добавляет lifecycleScope (для delay)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
 
     // Тестирование
     testImplementation(libs.junit)
