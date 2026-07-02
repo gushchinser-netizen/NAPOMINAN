@@ -1,5 +1,14 @@
 package com.example.sergej
 
+/*
+Это приложение для отображения сайта "НАПОМИНАЛКА" на смартфонах.
+Предполагается, что его будет запускать по расписанию приложение MacroDroid (из Google Play).
+Когда настройка свойств и запуск browser.loadUrl выполнялся из onCreate 
+иногда интернет-соединение не успевало сработать и на экране выходила ошибка.
+Надо подождать. Установка задержки delay недопустимо в onCreate (экран виснет), 
+поэтому запуск browser.loadUr выплняется так сложно (по рекомендации ИИ)
+*/
+
 import android.os.Bundle
 import android.webkit.WebSettings
 import android.webkit.WebView
